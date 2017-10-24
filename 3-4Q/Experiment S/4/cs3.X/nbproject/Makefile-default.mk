@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=cs3.c
+SOURCEFILES_QUOTED_IF_SPACED=cs3.c Switch.c Sample.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/cs3.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/cs3.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/cs3.o ${OBJECTDIR}/Switch.o ${OBJECTDIR}/Sample.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/cs3.o.d ${OBJECTDIR}/Switch.o.d ${OBJECTDIR}/Sample.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/cs3.o
+OBJECTFILES=${OBJECTDIR}/cs3.o ${OBJECTDIR}/Switch.o ${OBJECTDIR}/Sample.o
 
 # Source Files
-SOURCEFILES=cs3.c
+SOURCEFILES=cs3.c Switch.c Sample.c
 
 
 CFLAGS=
@@ -101,6 +101,20 @@ ${OBJECTDIR}/cs3.o: cs3.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  cs3.c  -o ${OBJECTDIR}/cs3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/cs3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/cs3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/Switch.o: Switch.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Switch.o.d 
+	@${RM} ${OBJECTDIR}/Switch.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Switch.c  -o ${OBJECTDIR}/Switch.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Switch.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Switch.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Sample.o: Sample.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Sample.o.d 
+	@${RM} ${OBJECTDIR}/Sample.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Sample.c  -o ${OBJECTDIR}/Sample.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sample.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Sample.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/cs3.o: cs3.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -108,6 +122,20 @@ ${OBJECTDIR}/cs3.o: cs3.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/cs3.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  cs3.c  -o ${OBJECTDIR}/cs3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/cs3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/cs3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Switch.o: Switch.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Switch.o.d 
+	@${RM} ${OBJECTDIR}/Switch.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Switch.c  -o ${OBJECTDIR}/Switch.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Switch.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Switch.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Sample.o: Sample.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Sample.o.d 
+	@${RM} ${OBJECTDIR}/Sample.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Sample.c  -o ${OBJECTDIR}/Sample.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sample.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Sample.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
