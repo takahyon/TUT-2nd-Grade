@@ -69,6 +69,9 @@ int main(void)
     */
     main:
     
+    
+    
+    while(1){
     TRISBbits.TRISB6 = 1;       // RD0(17pin)??????
     TRISDbits.TRISD0 = 0;       // RD0(34pin)??????
     TRISCbits.TRISC14 =0;
@@ -76,8 +79,7 @@ int main(void)
     IFS0bits.INT0IF=0;
     IEC0bits.INT0IE=1;
     INTCON2bits.INT0EP =1;
-    
-    while(1);         // Infinite loop
+    };         // Infinite loop
     return 0;
 }
 
